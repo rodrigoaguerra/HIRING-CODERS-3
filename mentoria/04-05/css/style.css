@@ -1,0 +1,36 @@
+/* criando um estilo para o fundo de tela */
+body {
+    background-image: url('../images/fundo.jpg');
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* criando o contexto de estilo */
+h1 {
+    font-size:  14px;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cab_especial {
+    /* background-color: green; */
+    font-size: 16px;
+    font-weight: bolder;
+    color: green;
+}
+
+.formatacao_campos {
+    background-color: rgb(228, 238, 228);
+    font-size: 12px;
+    font-weight: bolder;
+    color: red; 
+}
+
+/* Criando um estilo para id */
+#cadastro {
+    color: violet;
+    font-size: 12px;
+}
