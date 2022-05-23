@@ -8,7 +8,7 @@
 
 ul {
     list-style: none;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 a {
@@ -21,6 +21,35 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    /* border-bottom: 1px solid #FFF; */
+    /* box-shadow: 1px 1px 10px 1px #FFF; */
+    /* border-bottom: 15px ridge #FFF; */
+}
+
+header ul {
+    display: flex;
+    border-bottom: 2px dashed #FFF;
+}
+
+header ul li {
+    padding: 5px;
+}
+
+header ul li a {
+    transition: 300ms;
+}
+
+header ul li a:hover {
+    color: #c0a707;
+    text-decoration: underline;
+}
+
 .container {
     text-align: center;
 }
@@ -31,17 +60,6 @@ body {
 
 .container .name h5 {
     font-size: 25px;
-}
-
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-}
-
-header ul {
-    display: flex;
 }
 
 #about {
@@ -56,8 +74,28 @@ header ul {
 
 .form input {
     width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
 }
 
 .form button {
     width: 15%;
+    padding: 5px 10px;
+    background: linear-gradient(to right, #c0a707 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #464646;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+}
+
+.form button:hover {
+    background-position: left bottom;
+    color: #FFF;
 }
