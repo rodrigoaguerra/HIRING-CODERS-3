@@ -4,13 +4,17 @@ import { resolvers as clientResolvers } from "./Client/Client";
 import { resolvers as demandResolvers } from "./Demand/Demand";
 
 const resolvers = {
+    ...nodeResolvers,
     ...listResolvers,
     ...clientResolvers,
     ...demandResolvers,
-    ...nodeResolvers,
     Query: {
         ...clientResolvers.Query,
         ...demandResolvers.Query,
+    },
+
+    Mutation: {
+        ...clientResolvers.Mutation,
     }
 }
 
