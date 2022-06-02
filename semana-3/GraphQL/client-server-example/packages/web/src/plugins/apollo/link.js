@@ -1,19 +1,20 @@
-import { ApolloLink, Observable } from 'apollo-link';
-import { createHttpLink } from 'apollo-link-http';
-import { setContext } from 'apollo-link-context';
-import { onError } from 'apollo-link-error';
+import { ApolloLink, Observable, createHttpLink } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
+import { onError } from '@apollo/client/link/error';
 
 const loggerLink = new ApolloLink(
     (operation, forward) => 
         new Observable(observer => {
-            forward(operation).subscribe({
+            const subscription = forward(operation).subscribe({
                 next: (result) => {
                     console.log('log', result);
                     observer.next(result);
                 },
-                error: observer.complete.bind(observer),
+                error: observer.error.bind(observer),
                 complete: observer.complete.bind(observer),
             });
+            
+            return () => subscription.unsubscribe();
         })
 )
 

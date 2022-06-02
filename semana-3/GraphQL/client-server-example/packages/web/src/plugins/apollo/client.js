@@ -1,5 +1,5 @@
-import { ApolloClient } from 'apollo-client';
-import { InMemoryCache } from 'apollo-cache-inmemory';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+
 import link from './link';
 
 const cache = new InMemoryCache();

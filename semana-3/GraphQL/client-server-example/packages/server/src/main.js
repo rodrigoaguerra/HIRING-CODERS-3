@@ -19,7 +19,7 @@ async function startServer() {
     server.applyMiddleware({
         app,
         cors: {
-            origin: '*' // `http://${HOSTNAME}:3000`
+            origin: '*' // `http://${HOSTNAME}:3000`,
         },
         bodyParserConfig: true,
     });

@@ -93,7 +93,6 @@ export const resolvers = {
                 });
             }
 
-
             const filteredClients = clients.filter((client) => {
                 if (!filter || Object.keys(filter).length === 0) return true;
         
@@ -113,7 +112,7 @@ export const resolvers = {
                   }
                   return client[field] === value;
                 });
-              });
+            });
 
             return {
                 itens:  filteredClients.slice(skip, skip + take),
