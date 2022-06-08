@@ -1,0 +1,21 @@
+{
+  "name": "typesript",
+  "version": "1.0.0",
+  "description": "Porjeto de teste do TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typesript",
+    "usuario",
+    "criacao"
+  ],
+  "author": "Rodrigo Alves Guerra",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^17.0.41",
+    "typescript": "^4.7.3",
+    "query-string": "^7.1.1"
+  }
+}
